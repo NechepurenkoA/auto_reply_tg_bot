@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "auto-reply-tg-bot"
+version = "0.1.0"
+description = ""
+authors = ["NechepurenkoA <nechepurenko.work@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiogram = "^3.10.0"
+pyrogram = "^2.0.106"
+python-dotenv = "^1.0.1"
+sqlalchemy = "^2.0.31"
+pydantic = "^2.8.2"
+pydantic-settings = "^2.3.4"
+alembic = "^1.13.2"
+asyncpg = "^0.29.0"
+
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.13.2"
+black = "^24.4.2"
+flake8 = "^7.1.0"
+pre-commit = "^3.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+skip_glob = ["**/migrations/*.py"]
+src_paths = ["src/"]
